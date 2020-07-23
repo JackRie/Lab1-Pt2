@@ -59,90 +59,74 @@ body {
 
 @media only screen and (min-width: 768px) {
 
-  /* Reset Styles */
-body,
-h1,
-h2,
-ul,
-p {
-  margin: 0;
-  padding: 0;
-}
-
 /* Header Styles */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  display: flex;/*makes header a row*/
+  justify-content: space-between;/*puts space between h1 and nav*/
+  align-items: center;/*aligns content vertically within the header*/
 }
 
 .nav-list {
-  display: flex;
-  align-items: center;
+  display: flex;/*makes the nav list a row*/
+  align-items: center;/*centers nav items within their container(nav-list)*/
 }
 
 .nav-item {
-  margin-left: 10px;
+  margin-top: 0;/*takes top margin off the top of the nav-items*/
+  margin-left: 10px;/*puts margin on the nav-items to create space between the links*/
 }
 
 /* Main Styles */
 .main-content {
-  display: flex;
-  align-items: center;
-  position: relative;
+  display: flex;/*makes section elements in main a row*/
+  margin-top: 150px;/*puts margin on the top of th emain to create space from the header*/
 }
 
 .about {
-  flex: 1;
-  margin-left: 20px;
+  flex: 1;/*makes about section take up 1 fraction of the main container*/
 }
 
 .circles {
-  flex: 1;
-  position: relative;
+  flex: 1;/*makes circle section take up 1 fraction of the main container*/
+  position: relative;/*made position relative so the circles can be set to absolute*/
   height: 350px;
 }
 
 .large-circle {
   height: 250px;
   width: 250px;
-  border-radius: 50%;
   background-color: rgba(247, 136, 167, 0.6);
-  position: absolute;
   top: 0;
   right: 100px;
+  border-radius: 50%;/*could have done this on one class*/
+  position: absolute;/*can be set to absolute because it's parent container is set to relative*//*could have done this on one class*/
 }
 
 .med-circle {
   height: 200px;
   width: 200px;
-  border-radius: 50%;
-  background-color: rgba(247, 193, 162, 0.7);
-  position: absolute;
   bottom: 0;
   right: 20px;
   z-index: 3;
+  background-color: rgba(247, 193, 162, 0.7);
+  border-radius: 50%;/*could have done this on one class*/
+  position: absolute;/*can be set to absolute because it's parent container is set to relative*//*could have done this on one class*/
 }
 
 .small-circle {
   height: 150px;
   width: 150px;
-  border-radius: 50%;
   background-color:  rgba(207, 130, 213, 0.6);
-  position: absolute;
   top: 45px;
   right: 20px;
+  border-radius: 50%;/*could have done this on one class*/
+  position: absolute;/*can be set to absolute because it's parent container is set to relative*//*could have done this on one class*/
 }
 
 /* Button Styles */
-.button {
-  display: inline-block;
-  padding: 10px 15px;
-}
 
 .scroll-btn {
-  position: absolute;
+  position: fixed; /*postion: fixed; is relative to the viewport -- this also disregards display: block;*/
   left: 50%;
   bottom: 10px;
   transform: translateX(-50%);
